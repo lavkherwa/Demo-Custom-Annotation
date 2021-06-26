@@ -1,4 +1,4 @@
-package com.example.demo.advice;
+package com.example.demo.annotation.advice;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-public class ExecutionTimeAdvice {
+public class TrackExecutionTimeAdvice {
 	
 	@Around("@annotation(com.example.demo.annotation.TrackExecutionTime)")
 	public Object trackTime(ProceedingJoinPoint point) throws Throwable {
