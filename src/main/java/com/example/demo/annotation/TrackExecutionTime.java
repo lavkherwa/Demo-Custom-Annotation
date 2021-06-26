@@ -19,5 +19,6 @@ public @interface TrackExecutionTime {
 	 * Corresponding advice is implemented at {@link ExecutionTimeAdvice}
 	 * 
 	 */
+	boolean enable();
 
 }

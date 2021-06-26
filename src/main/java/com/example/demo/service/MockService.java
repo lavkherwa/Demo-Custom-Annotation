@@ -15,7 +15,7 @@ public class MockService {
 	List<String> carList = Arrays.asList("Audi", "BMW", "Porsche", "Mercedes");
 
 	// check how much time takes to get a CAR
-	@TrackExecutionTime
+	@TrackExecutionTime(enable = true)
 	@TrackExecution(enable = true)
 	public List<String> getAllCars() throws InterruptedException {
 
@@ -29,6 +29,7 @@ public class MockService {
 	}
 
 	// log what is being called and with what param
+	@TrackExecutionTime(enable = true)
 	@TrackExecution(enable = true)
 	public String getCar(String name, String dummy) {
 		return carList.stream().filter(e -> e.equals(name)).findAny().get();
