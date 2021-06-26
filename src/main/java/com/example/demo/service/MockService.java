@@ -28,11 +28,11 @@ public class MockService {
 		// do nothing
 	}
 
-	// log what is being called and with what param
 	@TrackExecutionTime(enable = true)
 	@TrackExecution(enable = true)
 	public String getCar(String name, String dummy) {
-		return carList.stream().filter(e -> e.equals(name)).findAny().get();
+
+		return this.carList.stream().filter(e -> e.equals(name)).findAny().get();
 
 	}
 
