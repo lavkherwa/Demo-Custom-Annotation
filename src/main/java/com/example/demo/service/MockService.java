@@ -22,4 +22,8 @@ public class MockService {
 		return Collections.unmodifiableList(carList);
 	}
 
+	public void addCar() {
+		// do nothing 
+	}
+
 }
